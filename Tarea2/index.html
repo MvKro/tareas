@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en" ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>AngularJS + Firebase</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/app.css"/>
+  </head>
+  <body ng-cloak>
+
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#/users/new">Create New User</a></li>
+            <li><a href="#">Users</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+   <div class="container">
+      <div class="row">
+        <div ng-view>
+        </div>
+      </div>
+   </div>
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/angular/angular-route.js"></script>
+    <script src="//cdn.firebase.com/js/client/1.0.6/firebase.js"></script>
+    <script src="//cdn.firebase.com/libs/angularfire/0.7.0/angularfire.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/services.js"></script>
+    <script src="js/service.firebase.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/filters.js"></script>
+    <script src="js/directives.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
