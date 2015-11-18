@@ -1,0 +1,23 @@
+<link rel="import" href="bower_components/polymer/polymer.html">
+
+<dom-module id="panel-element">
+    <template>
+     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+          <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <i class="fa fa-bar-chart-o fa-fw"></i>Panel
+                        </div>
+                        <!-- /.panel-heading -->
+                        <div class="panel-body">
+                            <div id="morris-area-chart"></div>
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+    </template>
+</dom-module>
+<script>
+	Polymer({
+		is: "panel-element",
+	
+	});
+</script>
