@@ -5,7 +5,14 @@
  </head>
  <body>
      <h1> Canvas Game</h1>
+     <div> 
      <button id="start" onclick="drawCanvas()"> Play Game </button>
+     <select id="mySelect" onchange="myFunction()">
+         <option value="Easy">Easy</option>
+         <option value="Medium">Medium</option>
+         <option value="Hard">Hard</option>
+     </select>
+     </div>
      <div id="score" style="display:none;">
        <span>Points :</span> <span id="contador"></span>
      </div>
@@ -33,9 +40,18 @@
          var ctx;
          var gameLoop;
          var contador = 0;
+         var x ="";
 
+
+      function myFunction() {
+        x = document.getElementById("mySelect").value;
+      return x;
+     }
       document.getElementById("retry").onclick = function() {
          document.getElementById("gameover").style.display="none";
+         document.getElementById("score").style.display="block";
+          contador = 0;
+            document.getElementById("contador").innerHTML = contador;
            ballX = 150;
            ballY = 150;
            ballDX = 2;
@@ -45,9 +61,20 @@
 
          function drawCanvas(){
              document.getElementById("start").style.display="none";
+                document.getElementById("score").style.display="block";
             document.getElementById("gameBoard").style.display="block";
               canvas = document.getElementById('gameBoard');
+              if(x === "Easy"){
 
+            }else if(x === "Medium"){
+                 ballX = 100;
+                ballY = 100;
+
+            }
+                else{
+                     ballX = 50;
+                ballY = 50;
+               }
               if(canvas.getContext){
                       ctx = canvas.getContext('2d');
                       gameLoop = setInterval(drawBall, 16);
